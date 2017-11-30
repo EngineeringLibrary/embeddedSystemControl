@@ -15,6 +15,7 @@
 #include "stepperA4988.h"
 #include "servomotor.h"
 #include "matrix.h"
+#include "wifi.h"
 
 gpio_num_t stepPinMotor1 = GPIO_NUM_22, directionPinMotor1 = GPIO_NUM_23, servoPin = GPIO_NUM_21;
 stepperA4988 motor1(stepPinMotor1, directionPinMotor1);
@@ -32,13 +33,15 @@ void stepControlMotor(void*arg)
         motor1.newStep();
 }
 
+void testeReceberWifi(const char* dadosRecebidos)
+{
+  LinAlg::Matrix<int> M = dadosRecebidos;
+  std::cout << M << std::endl;
+}
+
 extern "C" void app_main()
 {   
-
-  for(uint8_t i = 0; i < 255; ++i){
-    LinAlg::Matrix<uint8_t> M = "1.0,2.0;3.0,4.0";
-    std::cout << M << std::endl;
-  } 
+  wifi_TCP_server_init(testeReceberWifi);
 
   // xTaskCreate(controlMotor, "controlMotor", 1024 * 2, NULL, 5, NULL);
   // xTaskCreate(stepControlMotor, "step", 1024 * 2, NULL, 5, NULL);    

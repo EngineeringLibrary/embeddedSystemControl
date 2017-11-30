@@ -83,7 +83,58 @@ robotica_main.o: \
  /home/arch/Desktop/Repositorios/esp32/main/./matrix.h \
  /home/arch/esp/esp-idf/components/newlib/include/time.h \
  /home/arch/esp/esp-idf/components/newlib/include/machine/time.h \
- /home/arch/Desktop/Repositorios/esp32/main/./matrix.hpp
+ /home/arch/Desktop/Repositorios/esp32/main/./matrix.hpp \
+ /home/arch/Desktop/Repositorios/esp32/main/./wifi.h \
+ /home/arch/esp/esp-idf/components/newlib/include/string.h \
+ /home/arch/esp/esp-idf/components/newlib/include/sys/string.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/timers.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/task.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/arch/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_interface.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_event.h \
+ /home/arch/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/arch/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/arch/esp/esp-idf/components/newlib/include/sys/time.h \
+ /home/arch/esp/esp-idf/components/newlib/include/sys/fcntl.h \
+ /home/arch/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h \
+ /home/arch/esp/esp-idf/components/newlib/include/sys/stat.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_task.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/arch/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/def.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_event_loop.h \
+ /home/arch/esp/esp-idf/components/log/include/esp_log.h \
+ /home/arch/esp/esp-idf/components/log/include/esp_log_internal.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/err.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/api.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/netbuf.h \
+ /home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h
 
 /home/arch/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -252,4 +303,106 @@ robotica_main.o: \
 /home/arch/esp/esp-idf/components/newlib/include/machine/time.h:
 
 /home/arch/Desktop/Repositorios/esp32/main/./matrix.hpp:
+
+/home/arch/Desktop/Repositorios/esp32/main/./wifi.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/string.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/sys/string.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/timers.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_event.h:
+
+/home/arch/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/opt.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/sys/fcntl.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/sys/_default_fcntl.h:
+
+/home/arch/esp/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_task.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/debug.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/arch.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/arch/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/def.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_event_loop.h:
+
+/home/arch/esp/esp-idf/components/log/include/esp_log.h:
+
+/home/arch/esp/esp-idf/components/log/include/esp_log_internal.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/pbuf.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/err.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/netif.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/stats.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/mem.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/memp.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_std.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip4.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/api.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/netbuf.h:
+
+/home/arch/esp/esp-idf/components/lwip/include/lwip/lwip/sys.h:
 /home/arch/Desktop/Repositorios/esp32/main/./robotica_main.cpp:
