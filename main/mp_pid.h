@@ -2,29 +2,24 @@
 #define __MPPID_H_INCLUDED
 
 #include "matrix.h"
+#include "mp_general_controller.h"
 
 namespace ControlHandler{
 	template <typename Type>
-    class MP_PID
+    class MP_PID : public MP_General_Controller<Type>
     {
 	public:
-		MP_PID();
+		MP_PID(){}
 
     	Type OutputControl(Type Reference, Type SignalInput);
-    	std::string setRestrictions(std::string restrictions);
-    	void setControllerParameters(std::string controllers);
 
-    private:
-    	LinAlg::Matrix<Type> *Restrictions;
-    	LinAlg::Matrix<Type> *controllerParameters;
-    	Type step, error, pastError, integralError, derivativeError, PIDout, kp, ki, kd, bias, inWitchRegion;
-    	uint16_t quantityOfRegions;
-
+    protected:
+    	Type step, error, pastError, integralError, derivativeError, PIDout, kp, ki, kd, bias;
+    	
     	void intError(void);
         void difError(void);
-        bool isInside(void);
 	};
 }
 
-
+#include "mp_pid.hpp"
 #endif
