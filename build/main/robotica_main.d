@@ -138,7 +138,13 @@ robotica_main.o: \
  /home/arch/Desktop/Repositorios/esp32/main/./mp_pi.h \
  /home/arch/Desktop/Repositorios/esp32/main/./mp_general_controller.h \
  /home/arch/Desktop/Repositorios/esp32/main/./mp_general_controller.hpp \
- /home/arch/Desktop/Repositorios/esp32/main/./mp_pi.hpp
+ /home/arch/Desktop/Repositorios/esp32/main/./mp_pi.hpp \
+ /home/arch/Desktop/Repositorios/esp32/main/./pwm.h \
+ /home/arch/esp/esp-idf/components/driver/include/driver/ledc.h \
+ /home/arch/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/arch/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/arch/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/arch/esp/esp-idf/components/esp32/include/esp_dport_access.h
 
 /home/arch/esp/esp-idf/components/newlib/include/stdio.h:
 
@@ -417,4 +423,16 @@ robotica_main.o: \
 /home/arch/Desktop/Repositorios/esp32/main/./mp_general_controller.hpp:
 
 /home/arch/Desktop/Repositorios/esp32/main/./mp_pi.hpp:
+
+/home/arch/Desktop/Repositorios/esp32/main/./pwm.h:
+
+/home/arch/esp/esp-idf/components/driver/include/driver/ledc.h:
+
+/home/arch/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/arch/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/home/arch/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/home/arch/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 /home/arch/Desktop/Repositorios/esp32/main/./robotica_main.cpp:
