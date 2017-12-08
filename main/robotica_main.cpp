@@ -18,23 +18,27 @@
 #include "wifi.h"
 #include "mp_pi.h"
 #include "pwm.h"
+#include "encoder.h"
+#include "ultrassonic.h"
 
-gpio_num_t stepPinMotor1 = GPIO_NUM_22, directionPinMotor1 = GPIO_NUM_23, servoPin = GPIO_NUM_21;
-stepperA4988 motor1(stepPinMotor1, directionPinMotor1);
-servomotor garra(servoPin);
+// gpio_num_t stepPinMotor1 = GPIO_NUM_22, directionPinMotor1 = GPIO_NUM_23, servoPin = GPIO_NUM_21;
+// stepperA4988 motor1(stepPinMotor1, directionPinMotor1);
+// servomotor garra(servoPin);
 PWM pwm(GPIO_NUM_18,5000);
+// Encoder encode(GPIO_NUM_4);
+Ultrassonic distacia(GPIO_NUM_22,GPIO_NUM_23);
 
-void controlMotor(void*arg)
-{
-    while(1)
-        garra.setPosition(500);
-}
+// void controlMotor(void*arg)
+// {
+//     while(1)
+//         garra.setPosition(500);
+// }
 
-void stepControlMotor(void*arg)
-{
-    while(1)
-        motor1.newStep();
-}
+// void stepControlMotor(void*arg)
+// {
+//     while(1)
+//         motor1.newStep();
+// }
 
 void testeReceberWifi(const char* dadosRecebidos)
 {
