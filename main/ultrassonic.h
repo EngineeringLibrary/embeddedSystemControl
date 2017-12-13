@@ -21,8 +21,9 @@ public:
 volatile static gpio_num_t Ultrassonic_triger, Ultrassonic_echo;
 volatile static bool Ultrassonic_flag;
 volatile static uint32_t Ultrassonic_time;
+volatile static double Ultrassonic_time_output = 0;
 // volatile static uint32_t Ultrassonic_echo_time;
 static void IRAM_ATTR gpio_isr_ultrassinic_handler(void* arg);
-static void ultrassonicHandler(void* arg);
+ double ultrassonicRead(void);
 
 #endif

@@ -12,6 +12,7 @@ class PWM
 public:
 	PWM(gpio_num_t pin, uint16_t freq);
 	void update(uint16_t duty);
+	uint16_t getDuty(){return ledc_channel.duty;}
 
 private:
 	ledc_channel_config_t ledc_channel;

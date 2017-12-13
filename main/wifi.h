@@ -28,6 +28,8 @@ const int CLIENT_DISCONNECTED_BIT = BIT1;
 wifi_config_t ap_config;
 uint16_t TCPgate = 4000;
 void (*FunctionToBeCalledWhenADataHasBeenReceived)(const char*);
+struct netconn *conn, *newconn;
+err_t err;
 
 void printStationList();
 static void start_dhcp_server();
@@ -36,6 +38,7 @@ static void telnetTask(void *pvParameters);
 static void initialise_wifi_in_ap(void);
 static esp_err_t event_handler   (void *ctx, system_event_t *event);
 void wifi_TCP_server_init(void);
+// void wifi_TCP_send();
 
 // #include "wifi.h"
 
@@ -97,8 +100,6 @@ void print_sta_info(void *pvParam){
 
 static void telnetTask(void *pvParameters)
 {
-  struct netconn *conn, *newconn;
-  err_t err;
   conn = netconn_new(NETCONN_TCP);  //cria um novo identificador de conexão
   netconn_bind(conn,NULL,TCPgate); //associa a conexão à porta 4000
   netconn_listen(conn); //começa a escutar a conexão
@@ -111,6 +112,7 @@ static void telnetTask(void *pvParameters)
       void *data;
       char *data_char;
       u16_t len;
+      
       while((err = netconn_recv(newconn, &buf)) == ERR_OK)//entrando na rotina se algum dado for recebido
       {
         do{
@@ -121,9 +123,10 @@ static void telnetTask(void *pvParameters)
           ((*FunctionToBeCalledWhenADataHasBeenReceived)(data_char));
           //é aqui que vocês recebem o sinal do wifi e convertem em controle para o robô
 					//data_char = moveHndler(data_char);//retornar que finalizou a tarefa
-          err = netconn_write(newconn, data_char, strlen(data_char), NETCONN_COPY);//envia um dado via wifi
+          // err = netconn_write(newconn, data_char, strlen(data_char), NETCONN_COPY);//envia um dado via wifi
         }while(netbuf_next(buf) >= 0);//enquanto tiver dados recebidos, continua a executar
       }
+
       netconn_close(newconn);
       netconn_delete(newconn);
     }

@@ -19,6 +19,7 @@ PWM::PWM(gpio_num_t pin, uint16_t freq)
 
 void PWM::update(uint16_t duty)
 {
+	ledc_channel.duty       = duty; 
 	ledc_set_duty(ledc_channel.speed_mode, ledc_channel.channel, duty);
 	ledc_update_duty(ledc_channel.speed_mode, ledc_channel.channel);
 }

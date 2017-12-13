@@ -19,7 +19,7 @@ Ultrassonic::Ultrassonic(gpio_num_t triger, gpio_num_t echo)
 	// //create a queue to handle gpio event from isr
  //    gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
  //    //start gpio task
-    xTaskCreate(ultrassonicHandler, "UltrassonicFunction", 2048, NULL, 10, NULL);
+    // xTaskCreate(ultrassonicHandler, "UltrassonicFunction", 2048, NULL, 10, NULL);
 
     //install gpio isr service
     gpio_install_isr_service(0);
@@ -55,10 +55,10 @@ static void IRAM_ATTR gpio_isr_ultrassinic_handler(void* arg)
 	// }
 }
 
-static void ultrassonicHandler(void* arg)
+ double ultrassonicRead(void)
 {
-	while(1)
-	{
+	// while(1)
+	// {
 		Ultrassonic_time = 0;
 		gpio_intr_disable(Ultrassonic_triger);
 		ets_delay_us(2);
@@ -77,6 +77,9 @@ static void ultrassonicHandler(void* arg)
 		// gpio_intr_disable(Ultrassonic_triger);
 
 		vTaskDelay(100 / portTICK_PERIOD_MS);
-		printf("%d\n", Ultrassonic_time);
-	}
+		Ultrassonic_time_output += (0.1/1.5)*(Ultrassonic_time-Ultrassonic_time_output);
+		// y = -0,0622x + 20,131
+		// printf("%f\n", -0.062*Ultrassonic_time_output + 20.131);
+	// }
+		return -0.062*Ultrassonic_time_output + 20.131;
 }
