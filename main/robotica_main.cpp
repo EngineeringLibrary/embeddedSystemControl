@@ -17,6 +17,7 @@
 #include "matrix.h"
 #include "wifi.h"
 #include "mp_pi.h"
+#include "pid.h"
 #include "pwm.h"
 #include "encoder.h"
 #include "ultrassonic.h"
@@ -27,7 +28,7 @@
 PWM pwm(GPIO_NUM_18,500);
 // Encoder encode(GPIO_NUM_4);
 Ultrassonic distacia(GPIO_NUM_22,GPIO_NUM_23);
-
+ControlHandler::PID pid("1, 0.2, 0");
 // void controlMotor(void*arg)
 // {
 //     while(1)
@@ -39,11 +40,15 @@ Ultrassonic distacia(GPIO_NUM_22,GPIO_NUM_23);
 //     while(1)
 //         motor1.newStep();
 // }
+double pidReference = 0;
 
 void testeReceberWifi(const char* dadosRecebidos)
 {
   LinAlg::Matrix<double> receivedData = dadosRecebidos;
-  pwm.update(receivedData(0,0));
+  // pwm.update(receivedData(0,0));
+  // if(receivedData.getNumberOfColumns() > 1)
+    pidReference = receivedData(0,0);
+
   // ControlHandler::MP_PI<long double> pi;
   // pi.setControllerParameters(pi.setRestrictions(dadosRecebidos));
   // long double y = 1.0, h = 0.1, tau = 3.745318352059925, u = 0.0, k = 3.120973782771535;
@@ -69,6 +74,8 @@ extern "C" void app_main()
   // }
   while(1){
     double valor = ultrassonicRead();
+    double u = pid.OutputControl(pidReference, valor);
+    pwm.update(u);
     std::stringstream ss; ss << valor << "," << pwm.getDuty() << "\r\n\0";
     if(err == ERR_OK)
       err = netconn_write(newconn, ss.str().c_str(), strlen(ss.str().c_str())+1, NETCONN_COPY);//envia um dado via wifi
