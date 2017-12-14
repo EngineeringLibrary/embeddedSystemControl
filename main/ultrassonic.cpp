@@ -7,7 +7,7 @@ Ultrassonic::Ultrassonic(gpio_num_t triger, gpio_num_t echo)
     io_conf.intr_type = GPIO_INTR_HIGH_LEVEL;
     //bit mask of the pins, use GPIO4/5 here
     io_conf.pin_bit_mask = (1<<echo);
-    //set as input mode    
+    //set as input mode
     io_conf.mode = GPIO_MODE_INPUT;
     //enable pull-up mode
     io_conf.pull_up_en = (gpio_pullup_t)1;
@@ -38,7 +38,7 @@ static void IRAM_ATTR gpio_isr_ultrassinic_handler(void* arg)
 {
 	++Ultrassonic_time;
 	// clock_t init_time = clock();
-	// while(gpio_get_level(Ultrassonic_echo));	
+	// while(gpio_get_level(Ultrassonic_echo));
 	// Ultrassonic_time = (uint32_t)clock()-init_time;
 	// if(Ultrassonic_flag){
 	// 	Ultrassonic_time = 0;
@@ -76,8 +76,8 @@ static void IRAM_ATTR gpio_isr_ultrassinic_handler(void* arg)
 		// Ultrassonic_time = (uint32_t)clock()-init_time;
 		// gpio_intr_disable(Ultrassonic_triger);
 
-		vTaskDelay(100 / portTICK_PERIOD_MS);
-		Ultrassonic_time_output += (0.1/1.5)*(Ultrassonic_time-Ultrassonic_time_output);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
+		Ultrassonic_time_output += (1/1.5)*(Ultrassonic_time-Ultrassonic_time_output);
 		// y = -0,0622x + 20,131
 		// printf("%f\n", -0.062*Ultrassonic_time_output + 20.131);
 	// }
